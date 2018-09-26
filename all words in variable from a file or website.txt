@@ -1,0 +1,61 @@
+>>> for i in range(5):
+...     print(i)
+... 
+0
+1
+2
+3
+4
+
+=====================================================================================================================================
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$ cat test.py
+
+fruits = ['banana', 'apple',  'mango']
+for index in range(len(fruits)):
+       print 'Current fruit :', fruits[index]
+
+print "Good bye!"
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$ python test.py
+Current fruit : banana
+Current fruit : apple
+Current fruit : mango
+Good bye!
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$
+=====================================================================================================================================
+
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$ cat file.txt
+It was the best of times
+it was the worst of times
+it was the age of wisdom
+it was the age of foolishness
+it was the epoch of belief
+it was the epoch of incredulity
+it was the season of Light
+it was the season of Darkness
+it was the spring of hope
+it was the winter of despair
+we had everything before us
+we had nothing before us
+we were all going direct to Heaven
+we were all going direct the other way
+in short the period was so far like the present period that some of
+its noisiest authorities insisted on its being received for good or for
+evil in the superlative degree of comparison only
+
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$ cat test2.py
+#from urllib.request import urlopen
+
+with open("file.txt") as story:
+    story_words = []
+    for line in story:
+        line_words = line.split()
+        for word in line_words:
+            story_words.append(word)
+
+print(story_words)
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$ python test2.py
+['It', 'was', 'the', 'best', 'of', 'times', 'it', 'was', 'the', 'worst', 'of', 'times', 'it', 'was', 'the', 'age', 'of', 'wisdom', 'it', 'was', 'the', 'age', 'of', 'foolishness', 'it', 'was', 'the', 'epoch', 'of', 'belief', 'it', 'was', 'the', 'epoch', 'of', 'incredulity', 'it', 'was', 'the', 'season', 'of', 'Light', 'it', 'was', 'the', 'season', 'of', 'Darkness', 'it', 'was', 'the', 'spring', 'of', 'hope', 'it', 'was', 'the', 'winter', 'of', 'despair', 'we', 'had', 'everything', 'before', 'us', 'we', 'had', 'nothing', 'before', 'us', 'we', 'were', 'all', 'going', 'direct', 'to', 'Heaven', 'we', 'were', 'all', 'going', 'direct', 'the', 'other', 'way', 'in', 'short', 'the', 'period', 'was', 'so', 'far', 'like', 'the', 'present', 'period', 'that', 'some', 'of', 'its', 'noisiest', 'authorities', 'insisted', 'on', 'its', 'being', 'received', 'for', 'good', 'or', 'for', 'evil', 'in', 'the', 'superlative', 'degree', 'of', 'comparison', 'only']
+ratulpaul1990@cloudshell:~/python_testing (euphoric-drive-201911)$
