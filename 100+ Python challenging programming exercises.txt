@@ -28,12 +28,13 @@ Hints:
 Consider use range(#begin, #end) method
 
 Solution:
-l=[]
-for i in range(2000, 3201):
-    if (i%7==0) and (i%5!=0):
-        l.append(str(i))
+a=[]
+for i in range(2000,3201):
+    if(i%7==0 and i%5!=0):
+        a.append(i)
 
-print ','.join(l)
+print('Values:',a)
+
 #----------------------------------------#
 
 #----------------------------------------#
